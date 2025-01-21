@@ -1,0 +1,282 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: white;
+    background-color: rgb(4, 59, 60);
+}
+
+section {
+    padding-top: 5rem;
+    align-items: center;
+    text-align: center;
+}
+
+/* Heading styles */
+.heading {
+    text-align: center;
+}
+.heading span {
+    color: #0ef;
+}
+
+.sub-heading {
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 0.5rem 0 1.7rem;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgb(5, 5, 5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Navbar styles */
+.navbar ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 1.5625rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+    animation: slideTop 0.5s ease forwards;
+    opacity: 0;
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 340px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: -10px 0 10px #0ef;
+    display: none;
+    flex-direction: column;
+}
+
+/* Logo styles */
+.logo {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.5625rem;
+    color: white;
+    font-weight: 600;
+    cursor: default;
+    animation: slideRight 1s ease forwards;
+    opacity: 0;
+}
+
+/* Home section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10%;
+}
+
+.home-content h3 {
+    font-weight: 700;
+    animation: slideBottom 1s ease forwards;
+    opacity: 0;
+}
+
+.home-content h1 {
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    animation: slideRight 1s ease forwards;
+    opacity: 0;
+}
+
+.home-content p {
+    animation: slideLeft 1s ease forwards;
+    opacity: 0;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid rgb(108, 108, 9);
+    border-radius: 50%;
+    color: #0ef;
+    transition: 0.5s ease;
+    animation: slideLeft 1s ease forwards;
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: black;
+    box-shadow: 0 0 20px #0ef;
+}
+
+/* About section */
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.about-text p {
+    line-height: 1.4;
+    font-size: 1.2rem;
+    padding: 5px;
+    text-align: left;
+}
+
+/* Skill section */
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.btn-skill {
+    background: #02080d;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-skill:hover {
+    box-shadow: 0 0 10px cyan;
+}
+
+/* Project section */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 3rem;
+    animation: slideTop 1s ease forwards;
+    opacity: 0;
+}
+
+.detail {
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    border: 2px solid #0ef;
+    border-radius: 5px;
+    box-shadow: 0 0 15px cyan;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.detail:hover {
+    transform: scale(1.1);
+}
+
+/* Contact section */
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 130px;
+    padding-left: 30px;
+}
+
+.contact-text p {
+    color: rgb(177, 177, 177);
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.contact-icons i {
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    color: #0ef;
+    transition: 0.5s ease;
+}
+
+.contact-icons i:hover {
+    box-shadow: 0 0 30px #0ef;
+}
+
+/* Footer */
+.last-text p {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(7, 7, 7);
+    font-weight: 300;
+}
+
+/* Animations */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
